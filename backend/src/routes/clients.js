@@ -10,7 +10,7 @@ router
     .post(clientsController.createClients)
 
 router
-    .router("/:id")
+    .route("/:id")
     .put(clientsController.updateClients)
     .delete(clientsController.deleteClients)
 

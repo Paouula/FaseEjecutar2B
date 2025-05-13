@@ -9,8 +9,8 @@ clientsController.getClients = async (req, res) => {
 
 // INSERT
 clientsController.createClients = async (req, res) => {
-  const {nombre, correo, telefono, direccion, activo } = req.body;
-  const newClients = new customersModel({ nombre, correo, telefono, direccion, activo});
+  const {nombre, correo, contra, telefono, direccion, activo } = req.body;
+  const newClients = new customersModel({ nombre, correo, contra, telefono, direccion, activo});
   await newClients.save();
   res.json({ message: "Clients save" });
 };
@@ -27,13 +27,14 @@ const deleteClients = await clientsModel.findByIdAndDelete(req.params.id);
 // UPDATE
 clientsController.updateClients = async (req, res) => {
   // Solicito todos los valores
-  const {  nombre, correo, telefono, direccion, activo  } = req.body;
+  const {  nombre, correo, contra, telefono, direccion, activo  } = req.body;
   // Actualizo
   await clientsModel.findByIdAndUpdate(
     req.params.id,
     {
         nombre, 
         correo, 
+        contra,
         telefono, 
         direccion, 
         activo

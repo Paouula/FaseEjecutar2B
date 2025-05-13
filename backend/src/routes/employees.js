@@ -10,7 +10,7 @@ router
     .post(employeesController.createEmployees)
 
 router
-    .router("/:id")
+    .route("/:id")
     .put(employeesController.updateEmployees)
     .delete(employeesController.deleteEmployees)
 

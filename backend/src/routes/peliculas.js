@@ -10,7 +10,7 @@ router
     .post(peliculasController.insertPeliculas);
 
 router
-    .router("/:id")
+    .route("/:id")
     .put(peliculasController.updatePeliculas)
     .delete(peliculasController.deletePeliculas)
 

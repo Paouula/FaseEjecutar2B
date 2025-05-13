@@ -1,6 +1,7 @@
 /*coleciones:
 nombre 
 correo 
+contra
 telefono 
 direccion 
 activo*/
@@ -14,6 +15,10 @@ const ClientesSchema = new Schema(
             requiere: true
         },
         correo:{
+            type: String,
+            requiere: true
+        },
+        contra:{
             type: String,
             requiere: true
         },

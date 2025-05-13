@@ -20,6 +20,10 @@ const EmpleadosSchema = new Schema(
             type: String,
             requiere: true
         },
+        contra:{
+            type: String,
+            requiere: true
+        },
         telefono:{
             type: String,
             requiere: true
